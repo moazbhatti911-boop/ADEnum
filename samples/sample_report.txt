@@ -1,0 +1,26 @@
+ADEnum Report
+Domain: lab.local
+Domain controller: 192.168.56.10
+
+Users: 12
+Groups: 8
+Computers: 3
+Findings: 4
+
+Privileged groups:
+  Domain Admins (2): administrator, moaz
+  Enterprise Admins (1): administrator
+  Schema Admins (1): administrator
+
+Computers:
+  DC01 — Windows Server 2022 Standard
+  WIN10-LAB — Windows 10 Pro
+  WIN11-LAB — Windows 11 Pro
+
+Findings:
+  [High] moaz — Member of Domain Admins
+      moaz is a member of the privileged group Domain Admins.
+  [Medium] svc-backup — Password never expires
+      userAccountControl has the DONT_EXPIRE_PASSWORD flag (65536).
+  [Low] old-user — Stale account
+      Last logon: 2025-06-01 (more than 90 days ago).
